@@ -1,8 +1,10 @@
 import socket
 
 HOST="127.0.0.1"
-PORT="1234"
+PORT=1234
 
+#AF_INET means ipv4
+#SOCK_STREAM means TCP
 with socket.socket(socket.AF_INET,socket.SOCK_STREAM)as s:
     s.bind((HOST,PORT))
     s.listen()
